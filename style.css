@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* COMMON */
+.section {
+  padding: 70px 20px;
+}
+
+/* LETTER */
+.section.letter {
+  background: #fffafc;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 60px 30px;
+  border-radius: 20px;
+  color: #2b2b2b;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.section.letter h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff4d6d;
+  font-size: 2.5rem;
+}
+
+.section.letter p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+/* FINAL QUESTION */
+.final {
+  background: #ff758f;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.final button {
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.final .no {
+  background: #444;
+  color: white;
+}
+
+/* NO PAGE BACKGROUND */
+.no-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("bg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+/* NO CARD */
+.no-container {
+  background: rgba(255,255,255,0.08);
+  padding: 40px 30px;
+  border-radius: 22px;
+  max-width: 700px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.no-container h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+}
+
+.intro {
+  margin: 20px 0 30px;
+  color: #eee;
+}
+
+/* SLIDER */
+/* SLIDER CONTAINER */
+.slider {
+  position: relative;
+  width: 260px;
+  height: 340px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ALL SLIDES */
+.slide {
+  position: absolute;
+  inset: 0;                 /* 👈 ensures full coverage */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+
+  /* START slightly off-center, NOT outside */
+  transform: translateX(20px);
+  transition: opacity 1.6s ease, transform 1.6s ease;
+
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+  opacity: 1;
+  transform: translateX(0); /* 👈 perfectly centered */
+}
+
+
+/* LETTER TEXT */
+.letter-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.highlight {
+  font-size: 1.5rem;
+}
+
+.highlight span {
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+.no-container button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* FADE */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* IMAGE SECTION ON INDEX */
+.image-section {
+  text-align: center;
+}
+
+.image-section img {
+  width: 260px;
+  max-width: 90%;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.image-caption {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
